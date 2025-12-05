@@ -124,10 +124,13 @@ GROUP BY m.movie_title
 ORDER BY first_rented_date ASC;
 
 Insights
+
 Key Findings:
-Popularity of the movies : Certain movies consistently outperform others, showing solid customer preferences.
+
+Popularity of the movies: Certain movies consistently outperform others, showing solid customer preferences.
 Some customers has more rentals than other customers.this shows that Customers have different engagement levels.
 Genre Performance: crime/drama genre show higher rental count compared to others.
+
 
 
 
