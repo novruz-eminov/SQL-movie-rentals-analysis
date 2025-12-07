@@ -8,7 +8,8 @@ I answered key main questions about rental frequency, customer engagement, and g
 Database Structure
 
 The analysis uses three tables:
-```customers
+```
+customers
 (customer_id (PRIMARY KEY), first_name, last_name, email_address)
 movies
 (movie_id (PRIMARY KEY), movie_title, genre)
@@ -123,6 +124,7 @@ Key Findings:
 Popularity of the movies: Certain movies consistently outperform others, showing solid customer preferences.
 Some customers has more rentals than other customers.this shows that Customers have different engagement levels.
 Genre Performance: crime/drama genre show higher rental count compared to others.
+
 
 
 
