@@ -48,81 +48,72 @@ When was each movie first rented?
 SQL Queries usde for analytics
 ```
 -- Top 5 Most Rented Movies
-
-SELECT m.movie_title, COUNT(*) AS times_rented
-
+SELECT m.movie_title,
+       COUNT(*) AS times_rented
 FROM rentals AS r
-
-JOIN movies AS m ON r.movie_id = m.movie_id
-
+JOIN movies AS m
+     ON r.movie_id = m.movie_id
 GROUP BY m.movie_title
-
 ORDER BY times_rented DESC
-
 LIMIT 5;
 ```
 
+```
 -- Rentals Per Customer
 
 SELECT CONCAT(c.first_name, ' ', c.last_name) AS customer_name,
-
-COUNT(*) AS times_rented
-
+       COUNT(*) AS times_rented
 FROM rentals AS r
-
-JOIN customers AS c ON r.customer_id = c.customer_id
-
+JOIN customers AS c
+     ON r.customer_id = c.customer_id
 GROUP BY c.customer_id
-
 ORDER BY times_rented DESC;
+```
 
-
+```
 -- Movies Rented in Last Year
 
-SELECT m.movie_title, r.rental_date
-
+SELECT m.movie_title,
+       r.rental_date
 FROM rentals AS r
-
-JOIN movies AS m ON r.movie_id = m.movie_id
-
+JOIN movies AS m
+     ON r.movie_id = m.movie_id
 WHERE r.rental_date >= CURDATE() - INTERVAL 365 DAY;
+```
 
-
+```
 -- Customers Who Never Rented
 
 SELECT CONCAT(c.first_name, ' ', c.last_name) AS customer_name
-
 FROM customers AS c
-
 LEFT JOIN rentals AS r ON c.customer_id = r.customer_id
-
 WHERE r.rental_id IS NULL;
+```
 
-
+```
 -- Total Rentals Per Genre
 
-SELECT m.genre, COUNT(*) AS times_rented
-
+SELECT m.genre,
+       COUNT(*) AS times_rented
 FROM rentals AS r
-
-JOIN movies AS m ON r.movie_id = m.movie_id
-
+JOIN movies AS m
+     ON r.movie_id = m.movie_id
 GROUP BY m.genre
-
 ORDER BY times_rented DESC;
+```
 
-
+```
 --  First Rental Date for Each Movie
 
-SELECT m.movie_title, MIN(r.rental_date) AS first_rented_date
-
+SELECT m.movie_title,
+       MIN(r.rental_date)
+       AS first_rented_date
 FROM rentals AS r
-
-JOIN movies AS m ON r.movie_id = m.movie_id
-
+JOIN movies AS m
+     ON r.movie_id = m.movie_id
 GROUP BY m.movie_title
-
 ORDER BY first_rented_date ASC;
+```
 
 Insights
 
@@ -131,6 +122,7 @@ Key Findings:
 Popularity of the movies: Certain movies consistently outperform others, showing solid customer preferences.
 Some customers has more rentals than other customers.this shows that Customers have different engagement levels.
 Genre Performance: crime/drama genre show higher rental count compared to others.
+
 
 
 
