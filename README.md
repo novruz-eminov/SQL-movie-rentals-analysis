@@ -36,19 +36,17 @@ Date functions (CURDATE(), INTERVAL)
 Sorting (ORDER BY) and limiting (LIMIT)
 String manipulation using CONCAT()
 ```
-Case Study: The Business Problems that
-a movie rental platforms needed to optimize operations by understanding:
-What movies are most popular to guide inventory purchases
-Who are the most active customers for loyalty programs
-Which genres perform best for marketing focus
 
-Main question the project Answered:
+
+## Business Questions Answered
+``` bash
 What are the top 5 most rented movies?
 How many rentals does each customer have?
 Which movies were rented in the last year?
-Which customers have never rented anything?
+Which customers never rented anything?
 What are the total rentals per genre?
 When was each movie first rented?
+```
 
 ## SQL Queries usde for analytics
 ```
@@ -121,9 +119,13 @@ ORDER BY first_rented_date ASC;
 ```
 
 ## Key Findings
- Popularity of the movies:  Certain movies consistently outperform others, showing solid customer preferences.
-Some customers has more rentals than other customers.  This shows that Customers have different engagement levels.  
-Genre Performance:  crime/drama genre show higher rental count compared to others.
+
+Certain movies consistently outperform others, showing strong customer preferences.
+
+Some customers have significantly higher rental counts - differences in engagement.
+
+Crime/Drama genres had the highest rental frequency.
+
 
 
 
