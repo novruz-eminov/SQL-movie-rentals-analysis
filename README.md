@@ -40,12 +40,12 @@ String manipulation using CONCAT()
 
 ## Business Questions Answered
 ``` bash
-What are the top 5 most rented movies?
-How many rentals does each customer have?
-Which movies were rented in the last year?
-Which customers never rented anything?
-What are the total rentals per genre?
-When was each movie first rented?
+The top 5 most rented movies
+Rentals that each customer has
+Movie rentals in the last year
+Customers that never rented anything
+Total rentals per genre
+First rental date of each movie
 ```
 
 ## SQL Queries usde for analytics
@@ -125,6 +125,7 @@ Certain movies consistently outperform others, showing strong customer preferenc
 Some customers have significantly higher rental counts - differences in engagement.
 
 Crime/Drama genres had the highest rental frequency.
+
 
 
 
