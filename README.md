@@ -81,7 +81,7 @@ SELECT m.movie_title,
 FROM rentals AS r
 JOIN movies AS m
      ON r.movie_id = m.movie_id
-WHERE r.rental_date >= CURDATE() - INTERVAL 365 DAY;
+WHERE r.rental_date >= CURDATE()-INTERVAL 365 DAY;
 ```
 
 ```
@@ -124,7 +124,7 @@ Certain movies consistently outperform others, showing strong customer preferenc
 
 Some customers have significantly higher rental counts - differences in engagement.
 
-Crime/Drama genres had the highest rental frequency.
+Crime/Drama genres had the highest rental frequency. 
 
 
 
